@@ -1,3 +1,4 @@
+// counter_a_state.dart
 part of 'counter_a_bloc.dart';
 
 class CounterAState extends Equatable {
@@ -7,6 +8,12 @@ class CounterAState extends Equatable {
 
   CounterAState copyWith({int? count}){
     return CounterAState(count: count ?? this.count);
+  }
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "count: $count";
   }
 
   @override
