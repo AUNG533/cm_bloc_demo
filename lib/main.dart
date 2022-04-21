@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:cm_bloc_demo/src/app_route.dart';
 import 'package:cm_bloc_demo/src/bloc/counter_a_bloc/counter_a_bloc.dart';
 import 'package:cm_bloc_demo/src/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       providers: [counterABloc],
       child: MaterialApp(
         title: 'BloC Demo',
+        routes: AppRoute().getAll,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),

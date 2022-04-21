@@ -1,27 +1,22 @@
-import 'package:cm_bloc_demo/src/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/counter_a_bloc/counter_a_bloc.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class AnotherPage extends StatefulWidget {
+  const AnotherPage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<AnotherPage> createState() => _AnotherPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _AnotherPageState extends State<AnotherPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: [
-          // ignore: prefer_const_constructors
-          IconButton(onPressed: () => Navigator.pushNamed(context, AppRoute.another), icon: Icon(Icons.navigate_next))
-        ],
       ),
       body: BlocBuilder<CounterABloc, CounterAState>(
         builder: (context, state) {
